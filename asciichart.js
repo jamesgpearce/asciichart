@@ -38,8 +38,8 @@
             series = [series]
         }
 
-        let min = series[0][0]
-        let max = series[0][0]
+        let min = (typeof cfg.min !== 'undefined') ? cfg.min : series[0][0];
+        let max = (typeof cfg.max !== 'undefined') ? cfg.max : series[0][0];
 
         for (let j = 0; j < series.length; j++) {
             for (let i = 0; i < series[j].length; i++) {
